@@ -11,31 +11,35 @@ if (isset($_POST['edit_button'])) {
     $editCourse = $_POST['editCOURSE'];
     $editYear_level = $_POST['editYEAR_LEVEL'];
     $editSection = $_POST['editSECTION'];
+    
 }
 
 if(isset($_POST['update_button'])) {
-    $updateId = $_POST['updateID'];
-    $updateStudent_no = $_POST['updateSTUDENT_NO'];
-    $updateFirst_name = $_POST['updateFIRST_NAME'];
-    $updateLast_name = $_POST['updateLAST_NAME'];
-    $updateSex = $_POST['updateSEX'];
-    $updateBirthdate = $_POST['updateBIRTHDATE'];
-    $updateCourse = $_POST['updateCOURSE'];
-    $updateYear_level = $_POST['updateYEAR_LEVEL'];
-    $updateSection = $_POST['updateSECTION'];
+    $update_Id = $_POST['updateID'];
+    $update_Student_no = $_POST['updateSTUDENT_NO'];
+    $update_First_name = $_POST['updateFIRST_NAME'];
+    $update_Last_name = $_POST['updateLAST_NAME'];
+    $update_Sex = $_POST['updateSEX'];
+    $update_Birthdate = $_POST['updateBIRTHDATE'];
+    $update_Course = $_POST['updateCOURSE'];
+    $update_Year_level = $_POST['updateYEAR_LEVEL'];
+    $update_Section = $_POST['updateSECTION'];
 
     $queryUpdate = "UPDATE students SET 
-    student_no = '$updateStudent_no',
-    first_name = '$updateFirst_name',
-    last_name= '$updateLast_name',
-    sex = '$updateSex',
-    birthdate = '$updateBirthdate',
-    course = '$updateCourse',
-    year_level = '$updateYear_level',
-    section = '$updateSection'
-    WHERE id = '$updateId'";
+    student_no = '$update_Student_no',
+    first_name = '$update_First_name',
+    last_name= '$update_Last_name',
+    sex = '$update_Sex',
+    birthdate = '$update_Birthdate',
+    course = '$update_Course',
+    year_level = '$update_Year_level',
+    section = '$update_Section'
+    WHERE id = '$update_Id'";
 
     $sqlUpdate = mysqli_query($connection, $queryUpdate);
+
+    echo '<script> alert("Updated Successfully!") </script>';
+    echo '<script> window.location.href = "index.php" </script>';
 }
 ?>
 
