@@ -7,78 +7,13 @@ require('read.php');
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title>Student Information</title>
     </head>
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .main {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 20px;
-        }
-
-        .create-main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            margin-bottom: 30px;
-        }
-
-        .create-main h3 {
-            margin-bottom: 8px;
-        }
-
-        .create-main input[type="text"],
-        .create-main input[type="password"],
-        .create-main input[type="submit"]
-        .create-main input[type="reset"] {
-            width: 145px;
-            height: 20px;
-            padding: 2px 6px;
-            border: 1px solid;
-        }
-
-        .read-main {
-            border-collapse: collapse;
-            text-align: center;
-        }
-
-        .read-main th {
-            padding: 8px 30px;
-        }
-
-        .read-main td {
-            padding: 6px 30px;
-        }
-
-        .read-main td:last-child {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
-            white-space: nowrap;
-        }
-
-        .read-main td:last-child form {
-            margin: 0;
-        }
-
-        .read-main td:last-child input[type="submit"] {
-            padding: 4px 10px;
-            border: 1px solid;
-        }
-    </style>
-
     <body>
+
+    <h1>Student Information System</h1>
 
         <div class="main">
 
@@ -181,5 +116,9 @@ require('read.php');
         </div>
 
     </body>
+
+    <script src="main.js"> </script>
+
+
 
 </html>
